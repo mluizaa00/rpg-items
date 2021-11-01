@@ -1,0 +1,34 @@
+subprojects {
+    apply plugin: 'java'
+
+    group 'com.celeste'
+    version '1.0.1-SNAPSHOT'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    }
+
+    dependencies {
+        def lombok = "org.projectlombok:lombok:1.18.22"
+        def annotations = "org.jetbrains:annotations:22.0.0"
+
+        compileOnly lombok, annotations
+        annotationProcessor lombok, annotations
+    }
+
+    jar {
+        from 'LICENSE'
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    tasks.withType(Jar) {
+        destinationDirectory.set(file("$rootDir/target/"))
+    }
+}

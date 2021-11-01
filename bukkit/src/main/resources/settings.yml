@@ -1,0 +1,89 @@
+items:
+  watch-of-time:
+    name: "&aWatch of Time"
+    type: "WATCH_OF_TIME"
+    material: "CLOCK"
+    lore:
+      - ""
+      - "&eStops time for 11 seconds"
+      - ""
+  crystal-of-space:
+    name: "&6Crystal of Space"
+    type: "CRYSTAL_OF_SPACE"
+    material: "DIAMOND"
+    lore:
+      - ""
+      - "&eWarps space time is mysterious ways"
+      - ""
+  non-activated-divine-sword:
+    name: "&eThe Divine Sword"
+    type: "NON_ACTIVATED_DIVINE_SWORD"
+    material: "STONE_SWORD"
+    lore:
+      - ""
+      - "&eA divine sword told to contrain great power"
+      - ""
+  activated-divine-sword:
+    name: "&eThe Divine Sword"
+    type: "THE_DIVINE_SWORD"
+    material: "GOLDEN_SWORD"
+    lore:
+      - ""
+      - "&eA divine sword told to contrain great power"
+      - ""
+  key-of-the-divine:
+    name: "&eKey of the Divine Sword"
+    type: "KEY_OF_THE_DIVINE"
+    material: "GOLD_NUGGET"
+    lore:
+      - ""
+      - "&eA mysterious key that seems to unlock something"
+      - ""
+  minecart-justice:
+    name: "&eMinecart Justice"
+    type: "MINECART_JUSTICE"
+    material: "END_CRYSTAL"
+    lore:
+      - ""
+      - "&eShow them the power of the divine STEVE!"
+      - ""
+  zombie-lords:
+    name: "&eZombie Lords Chestplate"
+    type: "ZOMBIE_LORDS_CHESTPLATE"
+    material: "LEATHER_CHESTPLATE"
+    lore:
+      - ""
+      - "&eThe armor of a once powerful vampire king"
+      - ""
+  eternal-knife:
+    name: "&eEternal Knife"
+    type: "ETERNAL_KNIFE"
+    material: "ARROW"
+    lore:
+      - ""
+      - "&eWRRRRYYYY"
+      - ""
+  atomic-obliteration:
+    name: "&eAtomic Obliteration"
+    type: "ATOMIC_OBLITERATION"
+    material: "SLIME_BALL"
+    lore:
+      - ""
+      - "&eA orb of great power"
+      - ""
+  wings-of-eternal-flight:
+    name: "&eWings of Eternal Flight"
+    type: "WINGS_OF_ETERNAL_FLIGHT"
+    material: "ELYTRA"
+    lore:
+      - ""
+      - "&eThe person who wears this will know eternal freedom"
+      - ""
+  the-conch-of-reality:
+    name: "&eThe mighty conch"
+    type: "THE_CONCH_OF_REALITY"
+    material: "BONE"
+    lore:
+      - ""
+      - "&eThe mighty conch"
+      - ""
