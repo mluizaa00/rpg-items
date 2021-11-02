@@ -25,19 +25,26 @@ public final class MenuListener implements Listener {
   public void onClick(final InventoryClickEvent event) {
     event.setCancelled(true);
 
+    final Player player = (Player) event.getWhoClicked();
+    player.closeInventory();
+
     final Inventory inventory = event.getClickedInventory();
     if (inventory == null) {
       return;
     }
 
+    System.out.println("TRY TITLE");
     if (!inventory.getType().getDefaultTitle().equalsIgnoreCase("Select player to create portal")) {
       return;
     }
+    System.out.println("PASSED TITLE");
 
     final Player target = Bukkit.getPlayer(PlayerInventory.PLAYERS.get(event.getSlot()));
     if (target == null) {
       return;
     }
+
+    System.out.println("PASSED TARGET");
 
     executeTarget((Player) event.getWhoClicked(), target);
   }
