@@ -34,7 +34,7 @@ public final class MenuListener implements Listener {
     }
 
     System.out.println("TRY TITLE");
-    if (!inventory.getType().getDefaultTitle().equalsIgnoreCase("Select player to create portal")) {
+    if (!event.getView().getTitle().equalsIgnoreCase("Select player to create portal")) {
       return;
     }
     System.out.println("PASSED TITLE");
