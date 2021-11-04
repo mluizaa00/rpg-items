@@ -11,6 +11,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.metadata.FixedMetadataValue;
 
 import java.util.ArrayList;
@@ -39,7 +40,16 @@ public final class MenuListener implements Listener {
     }
     System.out.println("PASSED TITLE");
 
-    final Player target = Bukkit.getPlayer(PlayerInventory.PLAYERS.get(event.getSlot()));
+    final ItemStack item = event.getCurrentItem();
+    if (item == null || item.getItemMeta() == null) {
+      return;
+    }
+
+    final Player target = Bukkit.getPlayer(item.getItemMeta().getDisplayName()
+        .replace("§", "")
+        .replace("&", "")
+    );
+
     if (target == null) {
       return;
     }
