@@ -16,6 +16,7 @@ import org.bukkit.metadata.FixedMetadataValue;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @AllArgsConstructor
 public final class MenuListener implements Listener {
@@ -24,8 +25,6 @@ public final class MenuListener implements Listener {
 
   @EventHandler
   public void onClick(final InventoryClickEvent event) {
-    event.setCancelled(true);
-
     final Player player = (Player) event.getWhoClicked();
     player.closeInventory();
 
@@ -38,6 +37,9 @@ public final class MenuListener implements Listener {
     if (!event.getView().getTitle().equalsIgnoreCase("Select player to create portal")) {
       return;
     }
+
+    event.setCancelled(true);
+
     System.out.println("PASSED TITLE");
 
     final ItemStack item = event.getCurrentItem();
@@ -45,10 +47,14 @@ public final class MenuListener implements Listener {
       return;
     }
 
-    final Player target = Bukkit.getPlayer(item.getItemMeta().getDisplayName()
-        .replace("§", "")
-        .replace("&", "")
-    );
+    System.out.println("GOT ITEM");
+
+//    final Player target = Bukkit.getPlayer(item.getItemMeta().getDisplayName());
+
+    final Player target = Bukkit.getPlayer(item.getItemMeta().getDisplayName());
+
+    System.out.println("NAME: " + item.getItemMeta().getDisplayName());
+    System.out.println("TARGET: " + target);
 
     if (target == null) {
       return;

@@ -26,7 +26,7 @@ public final class PlayerInventory {
     return new ItemBuilder(Material.PLAYER_HEAD)
         .name("§7" + player.getName())
         .skull(player.getName())
-        .lore("§aClick to here to select")
+        .lore("§aClick to here to select", "", "§8" + player.getUniqueId())
         .build();
   }
 
