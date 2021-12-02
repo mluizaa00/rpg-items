@@ -255,10 +255,6 @@ public final class ItemsController {
     addCooldown(ItemsType.THE_CONCH_OF_REALITY, player);
   }
 
-  public void executeCrystalOfSpace(final Player player) {
-    player.openInventory(com.celeste.rpg.views.menu.PlayerInventory.getInventory());
-  }
-
   public void executeZombieLordsChestplate(final Player player) {
     if (plugin.getFactory().getProtectors().contains(player)) {
       removeProtectors(player);

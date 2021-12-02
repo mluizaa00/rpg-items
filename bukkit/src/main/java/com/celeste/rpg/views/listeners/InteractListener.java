@@ -61,7 +61,6 @@ public final class InteractListener implements Listener {
       case THE_DIVINE_SWORD -> controller.executeDivineSwordSpecial(player);
       case ETERNAL_KNIFE -> controller.executeEternalKnife(player);
       case ATOMIC_OBLITERATION -> controller.executeAtomicObliteration(player);
-      case CRYSTAL_OF_SPACE -> controller.executeCrystalOfSpace(player);
       case THE_CONCH_OF_REALITY -> controller.executeTheConchOfReality(player);
       case MINECART_JUSTICE -> controller.executeMinecartOfJustice(player);
     }

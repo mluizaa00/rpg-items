@@ -6,13 +6,11 @@ import com.celeste.configuration.model.entity.type.ReplaceType;
 import com.celeste.configuration.model.provider.Configuration;
 import com.celeste.configuration.model.type.ConfigurationType;
 import com.celeste.library.spigot.AbstractBukkitPlugin;
-import com.celeste.library.spigot.view.listener.MonitorListener;
 import com.celeste.rpg.controller.EntityController;
 import com.celeste.rpg.controller.ItemsController;
 import com.celeste.rpg.factory.ItemsFactory;
 import com.celeste.rpg.views.commands.GiveItemCommand;
 import com.celeste.rpg.views.listeners.*;
-import com.celeste.rpg.views.menu.MenuListener;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import org.bukkit.Bukkit;
@@ -53,8 +51,7 @@ public final class ItemsPlugin extends AbstractBukkitPlugin {
     registerListeners(
         new ElytraListener(this), new InteractListener(this),
         new PlayerListener(this), new WatchOfTimeListener(this),
-        new ProtectorListener(this), new CrystalOfSpaceListener(this),
-        new MenuListener(this)
+        new ProtectorListener(this), new CrystalOfSpaceListener(this)
     );
 
     registerCommands(
